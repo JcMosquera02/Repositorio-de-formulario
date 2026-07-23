@@ -12,6 +12,7 @@ import { ResumenComponent } from './pages/resumen/resumen.component';
   imports: [
     CommonModule,
     ReactiveFormsModule
-  ]
+  ],
+  exports: [RegistroComponent]
 })
 export class FormularioModule { }
