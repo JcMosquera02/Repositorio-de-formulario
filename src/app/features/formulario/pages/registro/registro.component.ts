@@ -31,4 +31,15 @@ export class RegistroComponent {
     delete this.datosEnviados.password;
     delete this.datosEnviados.confirmarPassword;
   }
+  getPasswordStrength(password: string): string {
+    if (!password) return '';
+    const hasLetters = /[a-zA-Z]/.test(password);
+    const hasNumbers = /[0-9]/.test(password);
+    const hasSymbols = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+    if (password.length >= 8 && hasLetters && hasNumbers && hasSymbols) return 'fuerte';
+    if (password.length >= 6 && (hasLetters && hasNumbers || hasSymbols)) return 'media';
+    return 'débil';
+  }
+
 }

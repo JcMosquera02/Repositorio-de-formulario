@@ -69,3 +69,20 @@
         overflow-x: auto;
     }
 }
+
+.password-strength {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+
+    &.fuerte {
+        color: green;
+    }
+
+    &.media {
+        color: orange;
+    }
+
+    &.débil {
+        color: red;
+    }
+}
